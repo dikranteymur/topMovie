@@ -8,16 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		20F947802B34905D008ABBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9477F2B34905D008ABBC3 /* AppDelegate.swift */; };
-		20F947892B349060008ABBC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F947882B349060008ABBC3 /* Assets.xcassets */; };
+		20F947892B349060008ABBC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F947882B349060008ABBC3 /* Images.xcassets */; };
 		20F9478C2B349060008ABBC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F9478A2B349060008ABBC3 /* LaunchScreen.storyboard */; };
+		20F947992B3493D1008ABBC3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F947982B3493D1008ABBC3 /* BaseViewModel.swift */; };
+		20F9479B2B3493D9008ABBC3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9479A2B3493D9008ABBC3 /* BaseViewController.swift */; };
+		20F9479F2B34980B008ABBC3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F9479E2B34980B008ABBC3 /* Colors.xcassets */; };
+		20F947A42B3499A0008ABBC3 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A02B3499A0008ABBC3 /* Lato-Light.ttf */; };
+		20F947A52B3499A0008ABBC3 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A12B3499A0008ABBC3 /* Lato-Bold.ttf */; };
+		20F947A62B3499A0008ABBC3 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A22B3499A0008ABBC3 /* Lato-Thin.ttf */; };
+		20F947A72B3499A0008ABBC3 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A32B3499A0008ABBC3 /* Lato-Regular.ttf */; };
+		9F27F987C007D95D06789B3D /* Pods_TopMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D33AA222E3A476052489825 /* Pods_TopMovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		20F9477C2B34905D008ABBC3 /* TopMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F9477F2B34905D008ABBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20F947882B349060008ABBC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20F947882B349060008ABBC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20F9478B2B349060008ABBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20F9478D2B349060008ABBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20F947982B3493D1008ABBC3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		20F9479A2B3493D9008ABBC3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		20F9479E2B34980B008ABBC3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		20F947A02B3499A0008ABBC3 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		20F947A12B3499A0008ABBC3 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		20F947A22B3499A0008ABBC3 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		20F947A32B3499A0008ABBC3 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		2D33AA222E3A476052489825 /* Pods_TopMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64AD8EEA490C25D0C09C1BE1 /* Pods-TopMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopMovie.release.xcconfig"; path = "Target Support Files/Pods-TopMovie/Pods-TopMovie.release.xcconfig"; sourceTree = "<group>"; };
+		D6FC5FD82567EC050652BB83 /* Pods-TopMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopMovie.debug.xcconfig"; path = "Target Support Files/Pods-TopMovie/Pods-TopMovie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F27F987C007D95D06789B3D /* Pods_TopMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133782BE24B063D468812AF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D33AA222E3A476052489825 /* Pods_TopMovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		20F947732B34905D008ABBC3 = {
 			isa = PBXGroup;
 			children = (
 				20F9477E2B34905D008ABBC3 /* TopMovie */,
 				20F9477D2B34905D008ABBC3 /* Products */,
+				847A582638E270DFD32F3F88 /* Pods */,
+				133782BE24B063D468812AF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +79,7 @@
 		20F9477E2B34905D008ABBC3 /* TopMovie */ = {
 			isa = PBXGroup;
 			children = (
+				20F947972B3493C7008ABBC3 /* Base */,
 				20F947962B349103008ABBC3 /* Supporting Files */,
 				20F947952B34907D008ABBC3 /* Recources */,
 				20F947942B34907A008ABBC3 /* Scene */,
@@ -76,7 +106,8 @@
 		20F947952B34907D008ABBC3 /* Recources */ = {
 			isa = PBXGroup;
 			children = (
-				20F947882B349060008ABBC3 /* Assets.xcassets */,
+				20F9479D2B34970F008ABBC3 /* Fonts */,
+				20F9479C2B349709008ABBC3 /* Assets */,
 			);
 			path = Recources;
 			sourceTree = "<group>";
@@ -90,6 +121,44 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		20F947972B3493C7008ABBC3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				20F947982B3493D1008ABBC3 /* BaseViewModel.swift */,
+				20F9479A2B3493D9008ABBC3 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		20F9479C2B349709008ABBC3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				20F947882B349060008ABBC3 /* Images.xcassets */,
+				20F9479E2B34980B008ABBC3 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		20F9479D2B34970F008ABBC3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				20F947A12B3499A0008ABBC3 /* Lato-Bold.ttf */,
+				20F947A02B3499A0008ABBC3 /* Lato-Light.ttf */,
+				20F947A32B3499A0008ABBC3 /* Lato-Regular.ttf */,
+				20F947A22B3499A0008ABBC3 /* Lato-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		847A582638E270DFD32F3F88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6FC5FD82567EC050652BB83 /* Pods-TopMovie.debug.xcconfig */,
+				64AD8EEA490C25D0C09C1BE1 /* Pods-TopMovie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20F947902B349060008ABBC3 /* Build configuration list for PBXNativeTarget "TopMovie" */;
 			buildPhases = (
+				475AEED78FA1000AE96225E4 /* [CP] Check Pods Manifest.lock */,
 				20F947782B34905D008ABBC3 /* Sources */,
 				20F947792B34905D008ABBC3 /* Frameworks */,
 				20F9477A2B34905D008ABBC3 /* Resources */,
+				74E1838A58EE2BB12A336A9E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,12 +219,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F9479F2B34980B008ABBC3 /* Colors.xcassets in Resources */,
+				20F947A62B3499A0008ABBC3 /* Lato-Thin.ttf in Resources */,
+				20F947A52B3499A0008ABBC3 /* Lato-Bold.ttf in Resources */,
 				20F9478C2B349060008ABBC3 /* LaunchScreen.storyboard in Resources */,
-				20F947892B349060008ABBC3 /* Assets.xcassets in Resources */,
+				20F947A72B3499A0008ABBC3 /* Lato-Regular.ttf in Resources */,
+				20F947892B349060008ABBC3 /* Images.xcassets in Resources */,
+				20F947A42B3499A0008ABBC3 /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		475AEED78FA1000AE96225E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TopMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74E1838A58EE2BB12A336A9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopMovie/Pods-TopMovie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopMovie/Pods-TopMovie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TopMovie/Pods-TopMovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20F947782B34905D008ABBC3 /* Sources */ = {
@@ -161,6 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F947802B34905D008ABBC3 /* AppDelegate.swift in Sources */,
+				20F947992B3493D1008ABBC3 /* BaseViewModel.swift in Sources */,
+				20F9479B2B3493D9008ABBC3 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +335,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -278,7 +398,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -299,6 +419,7 @@
 		};
 		20F947912B349060008ABBC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6FC5FD82567EC050652BB83 /* Pods-TopMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,10 +427,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MM2C8HD34J;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TopMovie/Info.plist;
+				INFOPLIST_FILE = "TopMovie/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -327,6 +447,7 @@
 		};
 		20F947922B349060008ABBC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64AD8EEA490C25D0C09C1BE1 /* Pods-TopMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,10 +455,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MM2C8HD34J;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TopMovie/Info.plist;
+				INFOPLIST_FILE = "TopMovie/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
