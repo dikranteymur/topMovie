@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+protocol BaseViewModelProtocol {
+    
+}
+
+class BaseViewModel: BaseViewModelProtocol {
+    
+    #if DEBUG
+    deinit {
+        debugPrint("deinit \(self)")
+    }
+    #endif
+}
