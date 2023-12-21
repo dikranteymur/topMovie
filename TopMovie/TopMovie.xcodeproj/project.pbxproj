@@ -10,6 +10,7 @@
 		20F947802B34905D008ABBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9477F2B34905D008ABBC3 /* AppDelegate.swift */; };
 		20F947892B349060008ABBC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F947882B349060008ABBC3 /* Assets.xcassets */; };
 		20F9478C2B349060008ABBC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F9478A2B349060008ABBC3 /* LaunchScreen.storyboard */; };
+		9F27F987C007D95D06789B3D /* Pods_TopMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D33AA222E3A476052489825 /* Pods_TopMovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,9 @@
 		20F947882B349060008ABBC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20F9478B2B349060008ABBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20F9478D2B349060008ABBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D33AA222E3A476052489825 /* Pods_TopMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64AD8EEA490C25D0C09C1BE1 /* Pods-TopMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopMovie.release.xcconfig"; path = "Target Support Files/Pods-TopMovie/Pods-TopMovie.release.xcconfig"; sourceTree = "<group>"; };
+		D6FC5FD82567EC050652BB83 /* Pods-TopMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopMovie.debug.xcconfig"; path = "Target Support Files/Pods-TopMovie/Pods-TopMovie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,17 +29,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F27F987C007D95D06789B3D /* Pods_TopMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133782BE24B063D468812AF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D33AA222E3A476052489825 /* Pods_TopMovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		20F947732B34905D008ABBC3 = {
 			isa = PBXGroup;
 			children = (
 				20F9477E2B34905D008ABBC3 /* TopMovie */,
 				20F9477D2B34905D008ABBC3 /* Products */,
+				847A582638E270DFD32F3F88 /* Pods */,
+				133782BE24B063D468812AF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +105,16 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		847A582638E270DFD32F3F88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6FC5FD82567EC050652BB83 /* Pods-TopMovie.debug.xcconfig */,
+				64AD8EEA490C25D0C09C1BE1 /* Pods-TopMovie.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20F947902B349060008ABBC3 /* Build configuration list for PBXNativeTarget "TopMovie" */;
 			buildPhases = (
+				475AEED78FA1000AE96225E4 /* [CP] Check Pods Manifest.lock */,
 				20F947782B34905D008ABBC3 /* Sources */,
 				20F947792B34905D008ABBC3 /* Frameworks */,
 				20F9477A2B34905D008ABBC3 /* Resources */,
+				74E1838A58EE2BB12A336A9E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +181,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		475AEED78FA1000AE96225E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TopMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74E1838A58EE2BB12A336A9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopMovie/Pods-TopMovie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TopMovie/Pods-TopMovie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TopMovie/Pods-TopMovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20F947782B34905D008ABBC3 /* Sources */ = {
@@ -299,6 +368,7 @@
 		};
 		20F947912B349060008ABBC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6FC5FD82567EC050652BB83 /* Pods-TopMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -327,6 +397,7 @@
 		};
 		20F947922B349060008ABBC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64AD8EEA490C25D0C09C1BE1 /* Pods-TopMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
