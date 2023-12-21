@@ -8,21 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		20F947802B34905D008ABBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9477F2B34905D008ABBC3 /* AppDelegate.swift */; };
-		20F947892B349060008ABBC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F947882B349060008ABBC3 /* Assets.xcassets */; };
+		20F947892B349060008ABBC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F947882B349060008ABBC3 /* Images.xcassets */; };
 		20F9478C2B349060008ABBC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F9478A2B349060008ABBC3 /* LaunchScreen.storyboard */; };
 		20F947992B3493D1008ABBC3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F947982B3493D1008ABBC3 /* BaseViewModel.swift */; };
 		20F9479B2B3493D9008ABBC3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9479A2B3493D9008ABBC3 /* BaseViewController.swift */; };
+		20F9479F2B34980B008ABBC3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F9479E2B34980B008ABBC3 /* Colors.xcassets */; };
+		20F947A42B3499A0008ABBC3 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A02B3499A0008ABBC3 /* Lato-Light.ttf */; };
+		20F947A52B3499A0008ABBC3 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A12B3499A0008ABBC3 /* Lato-Bold.ttf */; };
+		20F947A62B3499A0008ABBC3 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A22B3499A0008ABBC3 /* Lato-Thin.ttf */; };
+		20F947A72B3499A0008ABBC3 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A32B3499A0008ABBC3 /* Lato-Regular.ttf */; };
 		9F27F987C007D95D06789B3D /* Pods_TopMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D33AA222E3A476052489825 /* Pods_TopMovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		20F9477C2B34905D008ABBC3 /* TopMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F9477F2B34905D008ABBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20F947882B349060008ABBC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20F947882B349060008ABBC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20F9478B2B349060008ABBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20F9478D2B349060008ABBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20F947982B3493D1008ABBC3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		20F9479A2B3493D9008ABBC3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		20F9479E2B34980B008ABBC3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		20F947A02B3499A0008ABBC3 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		20F947A12B3499A0008ABBC3 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		20F947A22B3499A0008ABBC3 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		20F947A32B3499A0008ABBC3 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		2D33AA222E3A476052489825 /* Pods_TopMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64AD8EEA490C25D0C09C1BE1 /* Pods-TopMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopMovie.release.xcconfig"; path = "Target Support Files/Pods-TopMovie/Pods-TopMovie.release.xcconfig"; sourceTree = "<group>"; };
 		D6FC5FD82567EC050652BB83 /* Pods-TopMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopMovie.debug.xcconfig"; path = "Target Support Files/Pods-TopMovie/Pods-TopMovie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,7 +106,8 @@
 		20F947952B34907D008ABBC3 /* Recources */ = {
 			isa = PBXGroup;
 			children = (
-				20F947882B349060008ABBC3 /* Assets.xcassets */,
+				20F9479D2B34970F008ABBC3 /* Fonts */,
+				20F9479C2B349709008ABBC3 /* Assets */,
 			);
 			path = Recources;
 			sourceTree = "<group>";
@@ -117,6 +128,26 @@
 				20F9479A2B3493D9008ABBC3 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		20F9479C2B349709008ABBC3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				20F947882B349060008ABBC3 /* Images.xcassets */,
+				20F9479E2B34980B008ABBC3 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		20F9479D2B34970F008ABBC3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				20F947A12B3499A0008ABBC3 /* Lato-Bold.ttf */,
+				20F947A02B3499A0008ABBC3 /* Lato-Light.ttf */,
+				20F947A32B3499A0008ABBC3 /* Lato-Regular.ttf */,
+				20F947A22B3499A0008ABBC3 /* Lato-Thin.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		847A582638E270DFD32F3F88 /* Pods */ = {
@@ -188,8 +219,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F9479F2B34980B008ABBC3 /* Colors.xcassets in Resources */,
+				20F947A62B3499A0008ABBC3 /* Lato-Thin.ttf in Resources */,
+				20F947A52B3499A0008ABBC3 /* Lato-Bold.ttf in Resources */,
 				20F9478C2B349060008ABBC3 /* LaunchScreen.storyboard in Resources */,
-				20F947892B349060008ABBC3 /* Assets.xcassets in Resources */,
+				20F947A72B3499A0008ABBC3 /* Lato-Regular.ttf in Resources */,
+				20F947892B349060008ABBC3 /* Images.xcassets in Resources */,
+				20F947A42B3499A0008ABBC3 /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +427,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MM2C8HD34J;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TopMovie/Info.plist;
+				INFOPLIST_FILE = "TopMovie/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -419,7 +455,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MM2C8HD34J;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TopMovie/Info.plist;
+				INFOPLIST_FILE = "TopMovie/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
