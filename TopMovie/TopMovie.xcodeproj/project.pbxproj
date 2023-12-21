@@ -17,6 +17,8 @@
 		20F947A52B3499A0008ABBC3 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A12B3499A0008ABBC3 /* Lato-Bold.ttf */; };
 		20F947A62B3499A0008ABBC3 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A22B3499A0008ABBC3 /* Lato-Thin.ttf */; };
 		20F947A72B3499A0008ABBC3 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F947A32B3499A0008ABBC3 /* Lato-Regular.ttf */; };
+		20F947AA2B34A052008ABBC3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F947A92B34A052008ABBC3 /* HomeViewController.swift */; };
+		20F947AC2B34A05A008ABBC3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F947AB2B34A05A008ABBC3 /* HomeViewModel.swift */; };
 		9F27F987C007D95D06789B3D /* Pods_TopMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D33AA222E3A476052489825 /* Pods_TopMovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		20F947A12B3499A0008ABBC3 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		20F947A22B3499A0008ABBC3 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
 		20F947A32B3499A0008ABBC3 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		20F947A92B34A052008ABBC3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		20F947AB2B34A05A008ABBC3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2D33AA222E3A476052489825 /* Pods_TopMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64AD8EEA490C25D0C09C1BE1 /* Pods-TopMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopMovie.release.xcconfig"; path = "Target Support Files/Pods-TopMovie/Pods-TopMovie.release.xcconfig"; sourceTree = "<group>"; };
 		D6FC5FD82567EC050652BB83 /* Pods-TopMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopMovie.debug.xcconfig"; path = "Target Support Files/Pods-TopMovie/Pods-TopMovie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		20F947942B34907A008ABBC3 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				20F947A82B34A03F008ABBC3 /* HomeViewController */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -148,6 +153,15 @@
 				20F947A22B3499A0008ABBC3 /* Lato-Thin.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		20F947A82B34A03F008ABBC3 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				20F947A92B34A052008ABBC3 /* HomeViewController.swift */,
+				20F947AB2B34A05A008ABBC3 /* HomeViewModel.swift */,
+			);
+			path = HomeViewController;
 			sourceTree = "<group>";
 		};
 		847A582638E270DFD32F3F88 /* Pods */ = {
@@ -281,6 +295,8 @@
 				20F947802B34905D008ABBC3 /* AppDelegate.swift in Sources */,
 				20F947992B3493D1008ABBC3 /* BaseViewModel.swift in Sources */,
 				20F9479B2B3493D9008ABBC3 /* BaseViewController.swift in Sources */,
+				20F947AC2B34A05A008ABBC3 /* HomeViewModel.swift in Sources */,
+				20F947AA2B34A052008ABBC3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
