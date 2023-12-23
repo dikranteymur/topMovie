@@ -16,7 +16,9 @@ struct ApiRequestAdaptor {
     
     init(request: some RequestProtocol) {
         self.method = request.method.afHttpMethod
-        self.parameters = request.parameters
+        var parameters: [String: Any] = [:]
+        request.parameters.forEach({ parameters[$0.key] = $0.value })
+        self.parameters = parameters
         var headers: HTTPHeaders = []
         request.headers.forEach({ headers[$0.key] = $0.value })
         self.headers = headers

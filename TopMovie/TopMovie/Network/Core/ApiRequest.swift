@@ -27,16 +27,6 @@ extension ApiRequest {
 }
 
 extension ApiRequest {
-    var parameters: RequestParameters {
-        var parameters: [String: Any] = [:]
-        guard let preferredIdentifier = Locale.preferredLanguages.first else { return [:] }
-        let localeIdentifier = Locale(identifier: preferredIdentifier).identifier(.bcp47)
-        parameters["language"] = localeIdentifier
-        return parameters
-    }
-}
-
-extension ApiRequest {
     var headers: RequestHeaders {
         var headers: [String: String] = [:]
         headers["accept"] = ApiBackend.accept.getString()
