@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol HomeViewModelEvents {
+    
+}
+
 protocol HomeViewModelProtocol {
     func loadShows()
     func loadShowsWith(page: Int)
@@ -21,6 +25,7 @@ final class HomeViewModel: BaseViewModel, HomeViewModelProtocol {
             switch result {
             case .success(let response):
                 print("Response: \(response)")
+                print("ok")
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
             }
