@@ -17,5 +17,12 @@ struct PopularShowsRequest: ApiRequest {
     init(page: Int = 1) {
         endPoint = "tv/popular"
         parameters["page"] = page
+        addLanguageParameter()
+    }
+    
+    private mutating func addLanguageParameter() {
+        guard let preferredIdentifier = Locale.preferredLanguages.first else { return }
+        let localeIdentifier = Locale(identifier: preferredIdentifier).identifier(.bcp47)
+        parameters["language"] = localeIdentifier
     }
 }
