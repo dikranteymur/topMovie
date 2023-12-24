@@ -49,7 +49,6 @@ extension HomeViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.delegate = self
         tableView.dataSource = self
-        navigationController?.navigationBar.tintColor = .white
     }
 }
 

@@ -39,7 +39,7 @@ final class ShowsTableViewCellModel: ShowsTableViewCellModelProtocol {
 extension ShowsTableViewCellModel {
     
     convenience init(model: PopularShowsResultsModel) {
-        self.init(imageUrl: URL(string: model.posterPath ?? ""),
+        self.init(imageUrl: URL(string: ApiBackend.imageUrl.getString().appending(model.posterPath ?? "")),
                   title: model.name,
                   description: model.overview,
                   date: model.firstAirDate?.toDateString)
