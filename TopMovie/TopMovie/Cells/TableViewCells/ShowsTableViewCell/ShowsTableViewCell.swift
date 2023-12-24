@@ -14,13 +14,15 @@ final class ShowsTableViewCell: UITableViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 16
         imageView.clipsToBounds = true
+        imageView.layer.borderColor = UIColor.colorOrange.cgColor
+        imageView.layer.borderWidth = 4
         return imageView
     }()
     
     private var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .fontBold16
-        label.textColor = .colorBlack
+        label.textColor = .white
         label.numberOfLines = 0
         return label
     }()
@@ -28,15 +30,15 @@ final class ShowsTableViewCell: UITableViewCell {
     private var descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = .fontRegular14
-        label.textColor = .colorDarkGray
-        label.numberOfLines = 4
+        label.textColor = .white
+        label.numberOfLines = 3
         return label
     }()
     
     private var dateLabel: UILabel = {
         let label = UILabel()
         label.font = .fontLight12
-        label.textColor = .colorDarkGray
+        label.textColor = .white
         label.textAlignment = .right
         return label
     }()
@@ -44,22 +46,22 @@ final class ShowsTableViewCell: UITableViewCell {
     private var rightArrowImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.tintColor = .colorOrange
         return imageView
     }()
     
-    private var titleStackView: UIStackView = {
+    private var labelsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .leading
-        stackView.spacing = 8
+        stackView.spacing = 4
         return stackView
     }()
     
-    private var descriptionDateStackView: UIStackView = {
+    private var mainStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.alignment = .leading
-        stackView.spacing = 8
+        stackView.alignment = .center
+        stackView.spacing = 12
         return stackView
     }()
     
@@ -85,39 +87,23 @@ final class ShowsTableViewCell: UITableViewCell {
 extension ShowsTableViewCell {
     
     private func addSubviews() {
-        addShowImageView()
-        addTitleStackView()
-        addDescriptionDateStackView()
-        addRightArrowImageView()
+        addMainStackView()
+        addLabelsStackView()
     }
     
-    private func addShowImageView() {
-        contentView.addSubview(showImageView)
-        showImageView.leadingToSuperview(offset: 16)
-        showImageView.verticalToSuperview(insets: .vertical(16))
-        let width = UIScreen.main.bounds.height * 0.20
-        showImageView.size(.init(width: width, height: width))
+    private func addMainStackView() {
+        contentView.addSubview(mainStackView)
+        mainStackView.edgesToSuperview(insets: .uniform(16))
+        mainStackView.addArrangedSubview(showImageView)
+        mainStackView.addArrangedSubview(labelsStackView)
+        mainStackView.addArrangedSubview(rightArrowImageView)
+        showImageView.size(.init(width: 110, height: 110))
     }
     
-    private func addTitleStackView() {
-        contentView.addSubview(titleStackView)
-        titleStackView.leadingToTrailing(of: showImageView, offset: 16)
-        titleStackView.centerYToSuperview()
-        titleStackView.addArrangedSubview(titleLabel)
-    }
-    
-    private func addDescriptionDateStackView() {
-        titleStackView.addArrangedSubview(descriptionDateStackView)
-        descriptionDateStackView.addArrangedSubview(descriptionLabel)
-        descriptionDateStackView.addArrangedSubview(dateLabel)
-    }
-    
-    private func addRightArrowImageView() {
-        contentView.addSubview(rightArrowImageView)
-        rightArrowImageView.leadingToTrailing(of: titleStackView, offset: 12)
-        rightArrowImageView.trailingToSuperview(offset: -16)
-        rightArrowImageView.centerYToSuperview()
-        rightArrowImageView.size(.init(width: 24, height: 24))
+    private func addLabelsStackView() {
+        labelsStackView.addArrangedSubview(titleLabel)
+        labelsStackView.addArrangedSubview(dateLabel)
+        labelsStackView.addArrangedSubview(descriptionLabel)
     }
 }
 
@@ -125,15 +111,24 @@ extension ShowsTableViewCell {
 extension ShowsTableViewCell {
     
     private func configureContents() {
+        backgroundColor = .colorDarkGray
+        selectionStyle = .none
+        contentView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(contentViewLongTapped(_:))))
         rightArrowImageView.image = UIImage(named: "right_arrow")
-        contentView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(contentViewLongTapped)))
+        showImageView.image = UIImage(named: "empty_image")
+        titleLabel.text = viewModel?.title
+        descriptionLabel.text = viewModel?.description
+        dateLabel.text = viewModel?.date
     }
 }
 
 // MARK: - Actions
 extension ShowsTableViewCell {
     @objc
-    private func contentViewLongTapped() {
-        print("Uzun basildi")
+    private func contentViewLongTapped(_ gesture: UILongPressGestureRecognizer) {
+        if gesture.state == UIGestureRecognizer.State.ended {
+            print("Uzun Basildi")
+            return
+        }
     }
 }
