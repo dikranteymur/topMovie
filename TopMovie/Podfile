@@ -8,5 +8,6 @@ target 'TopMovie' do
   # Pods for TopMovie
   pod 'Alamofire'
   pod 'TinyConstraints'
+  pod 'SDWebImage'
 
 end

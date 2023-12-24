@@ -1,20 +1,26 @@
 PODS:
   - Alamofire (5.8.0)
+  - SDWebImage (5.18.1):
+    - SDWebImage/Core (= 5.18.1)
+  - SDWebImage/Core (5.18.1)
   - TinyConstraints (4.0.2)
 
 DEPENDENCIES:
   - Alamofire
+  - SDWebImage
   - TinyConstraints
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - SDWebImage
     - TinyConstraints
 
 SPEC CHECKSUMS:
   Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
+  SDWebImage: ebdbcebc7933a45226d9313bd0118bc052ad458b
   TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: 72489cd72721ca4df99934f40c8ade05dafc22a9
+PODFILE CHECKSUM: b80108b072679842c4e9b9f452a4a09224242e28
 
 COCOAPODS: 1.12.1
