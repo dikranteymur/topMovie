@@ -21,15 +21,25 @@ class BaseViewController<T: BaseViewModel>: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackgroundColor()
+        view.backgroundColor = setBackgroundColor()
+        setNavigationBarTitle()
     }
     
-    func setBackgroundColor(_ color: UIColor? = nil) {
-        guard let color = color else {
-            view.backgroundColor = .white
-            return
-        }
-        view.backgroundColor = color
+    func setBackgroundColor() -> UIColor {
+        return .white
+    }
+    
+    func setNavigationBarTitle() {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .colorPurple.withAlphaComponent(0.8)
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.colorOrange, .font: UIFont.fontThin32]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.fontThin16]
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
     }
     
     #if DEBUG
