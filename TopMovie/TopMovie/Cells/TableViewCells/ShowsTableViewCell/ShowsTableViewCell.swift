@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class ShowsTableViewCell: UITableViewCell {
     
     private var showImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         imageView.layer.cornerRadius = 16
         imageView.clipsToBounds = true
         imageView.layer.borderColor = UIColor.colorOrange.cgColor
@@ -113,22 +114,10 @@ extension ShowsTableViewCell {
     private func configureContents() {
         backgroundColor = .colorDarkGray
         selectionStyle = .none
-        contentView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(contentViewLongTapped(_:))))
         rightArrowImageView.image = UIImage(named: "right_arrow")
-        showImageView.image = UIImage(named: "empty_image")
+        showImageView.sd_setImage(with: viewModel?.imageUrl, placeholderImage: UIImage(named: "empty_image"))
         titleLabel.text = viewModel?.title
         descriptionLabel.text = viewModel?.description
         dateLabel.text = viewModel?.date
-    }
-}
-
-// MARK: - Actions
-extension ShowsTableViewCell {
-    @objc
-    private func contentViewLongTapped(_ gesture: UILongPressGestureRecognizer) {
-        if gesture.state == UIGestureRecognizer.State.ended {
-            print("Uzun Basildi")
-            return
-        }
     }
 }
