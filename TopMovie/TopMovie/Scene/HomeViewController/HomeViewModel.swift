@@ -8,31 +8,91 @@
 import Foundation
 
 protocol HomeViewModelEvents {
-    
+    var reloadData: VoidClosure? { get }
+    var showFooterView: BoolClosure? { get }
+    var handleEmptyView: BoolClosure? { get }
 }
 
-protocol HomeViewModelProtocol {
-    func loadShows()
-    func loadShowsWith(page: Int)
+protocol HomeViewModelProtocol: HomeViewModelEvents {
+    var numberOfItems: Int? { get }
+    
+    func didLoad()
+    func cellForItemAt(indexPath: IndexPath) -> ShowsTableViewCellModelProtocol
+    func loadShowsWithPagination()
+    func didSelectCellAt(indexPath: IndexPath)
 }
 
 final class HomeViewModel: BaseViewModel, HomeViewModelProtocol {
+    // Events
+    var reloadData: VoidClosure?
+    var showFooterView: BoolClosure?
+    var handleEmptyView: BoolClosure?
     
-    func loadShows() {
+    // Privates
+    private var page: Int = 1
+    private var canPagination: Bool = false
+    private var popularShowItems: [ShowsTableViewCellModelProtocol] = []
+    
+    // DataSource
+    var numberOfItems: Int? {
+        return popularShowItems.count
+    }
+    
+    func didLoad() {
+        loadShows()
+    }
+    
+    func cellForItemAt(indexPath: IndexPath) -> ShowsTableViewCellModelProtocol {
+        return popularShowItems[indexPath.row]
+    }
+    
+    func didSelectCellAt(indexPath: IndexPath) {
+        let selectedValue = popularShowItems[indexPath.row]
+    }
+    
+    private func loadShows() {
         let request = PopularShowsRequest(page: 1)
         app.service.request(with: request) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                print("Response: \(response)")
-                print("ok")
+                configureCellItems(results: response.results ?? [])
+                reloadData?()
+                self.page += 1
+                self.canPagination = true
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
             }
         }
     }
     
-    func loadShowsWith(page: Int) {
-        
+    func loadShowsWithPagination() {
+        if canPagination {
+            canPagination = false
+            showFooterView?(true)
+            let request = PopularShowsRequest(page: page)
+            app.service.request(with: request) { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success(let response):
+                    configureCellItems(results: response.results ?? [])
+                    reloadData?()
+                    showFooterView?(false)
+                    self.page += 1
+                case .failure(let error):
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+}
+
+// MARK: - Configures
+extension HomeViewModel {
+    
+    private func configureCellItems(results: [PopularShowsResultsModel]) {
+        popularShowItems.append(contentsOf: results.map({ ShowsTableViewCellModel(model: $0) }))
+        canPagination = !results.isEmpty
+        handleEmptyView?(results.isEmpty)
     }
 }
