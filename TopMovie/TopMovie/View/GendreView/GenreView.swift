@@ -66,8 +66,7 @@ extension GenreView {
 extension GenreView {
     
     private func configureContents() {
-        guard let viewModel = viewModel else { return }
-        titleLabel.text = viewModel.title
+        titleLabel.text = viewModel?.title
     }
 }
 

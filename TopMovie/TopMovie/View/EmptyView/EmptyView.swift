@@ -84,10 +84,9 @@ extension EmptyView {
 extension EmptyView {
     
     private func configureContents() {
-        guard let viewModel = viewModel else { return }
-        if let imageName = viewModel.imageName {
+        if let imageName = viewModel?.imageName {
             imageView.image = UIImage(named: imageName)
         }
-        titleLabel.text = viewModel.title
+        titleLabel.text = viewModel?.title
     }
 }
