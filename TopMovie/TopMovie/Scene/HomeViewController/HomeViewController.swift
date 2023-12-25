@@ -47,6 +47,8 @@ extension HomeViewController {
     private func configureContents() {
         navigationItem.title = "Popular TV Shows"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.backButtonTitle = "Geri"
+        navigationController?.navigationBar.tintColor = .colorOrange
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -79,6 +81,10 @@ extension HomeViewController: UITableViewDataSource {
         cell.setCell(viewModel: viewModel.cellForItemAt(indexPath: indexPath))
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRowAt(indexPath: indexPath)
+    }
 }
 
 // MARK: - Observers
@@ -106,6 +112,12 @@ extension HomeViewController {
             } else {
                 self.tableView.backgroundColor = nil
             }
+        }
+        
+        viewModel.navigate = { [weak self] model in
+            guard let self = self else { return }
+            let viewController = DetailBuilder.make(model: model)
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }
