@@ -8,7 +8,8 @@
 import UIKit
 
 final class EmptyView: UIView {
-    weak var viewModel: EmptyViewModelProtocol?
+    
+    private weak var viewModel: EmptyViewModelProtocol?
     
     private let contentView: UIView = {
         let view = UIView()

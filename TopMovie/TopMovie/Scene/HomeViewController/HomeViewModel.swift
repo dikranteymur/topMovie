@@ -11,6 +11,7 @@ protocol HomeViewModelEvents {
     var reloadData: VoidClosure? { get }
     var showFooterView: BoolClosure? { get }
     var handleEmptyView: BoolClosure? { get }
+    var navigate: AnyClosure<PopularShowsResultsModel>? { get }
 }
 
 protocol HomeViewModelProtocol: HomeViewModelEvents {
@@ -19,7 +20,7 @@ protocol HomeViewModelProtocol: HomeViewModelEvents {
     func didLoad()
     func cellForItemAt(indexPath: IndexPath) -> ShowsTableViewCellModelProtocol
     func loadShowsWithPagination()
-    func didSelectCellAt(indexPath: IndexPath)
+    func didSelectRowAt(indexPath: IndexPath)
 }
 
 final class HomeViewModel: BaseViewModel, HomeViewModelProtocol {
@@ -27,11 +28,13 @@ final class HomeViewModel: BaseViewModel, HomeViewModelProtocol {
     var reloadData: VoidClosure?
     var showFooterView: BoolClosure?
     var handleEmptyView: BoolClosure?
+    var navigate: AnyClosure<PopularShowsResultsModel>?
     
     // Privates
     private var page: Int = 1
     private var canPagination: Bool = false
     private var popularShowItems: [ShowsTableViewCellModelProtocol] = []
+    private var popularShows: [PopularShowsResultsModel] = []
     
     // DataSource
     var numberOfItems: Int? {
@@ -46,8 +49,8 @@ final class HomeViewModel: BaseViewModel, HomeViewModelProtocol {
         return popularShowItems[indexPath.row]
     }
     
-    func didSelectCellAt(indexPath: IndexPath) {
-        let selectedValue = popularShowItems[indexPath.row]
+    func didSelectRowAt(indexPath: IndexPath) {
+        navigate?(popularShows[indexPath.row])
     }
     
     private func loadShows() {
@@ -91,6 +94,7 @@ final class HomeViewModel: BaseViewModel, HomeViewModelProtocol {
 extension HomeViewModel {
     
     private func configureCellItems(results: [PopularShowsResultsModel]) {
+        popularShows.append(contentsOf: results)
         popularShowItems.append(contentsOf: results.map({ ShowsTableViewCellModel(model: $0) }))
         canPagination = !results.isEmpty
         handleEmptyView?(results.isEmpty)
